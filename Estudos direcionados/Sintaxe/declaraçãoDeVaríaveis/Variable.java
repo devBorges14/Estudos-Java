@@ -11,7 +11,7 @@ class Variable {
     }}
 /*
  * NÚMEROS INTEIROS (sem ponto decimal):
- *
+ *decimal
  *
  * 1) byte  => 8 bits    => de -128 a 127
  *    Exemplo: byte idade = 13;

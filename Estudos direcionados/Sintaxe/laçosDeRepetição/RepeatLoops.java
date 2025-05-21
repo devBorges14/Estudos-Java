@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class RepeatLoops {
     public static void main(String[] args) {
         // While
@@ -50,5 +51,52 @@ class Ex1While {
             num = num - 1;
         }
         scanner.close(); // sempre bom fechar o scanner
+    }
+}
+class Ex2For {
+    public static void main(String[] args) {
+        /*
+        * 2. For – Tabuada
+            Descrição: Peça um número e exiba a tabuada dele de 1 a 10 usando for.
+        * */
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um número: ");
+        int num = scanner.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            int conta = i * num;
+            System.out.println(num + " x " + i + " = " + conta);
+        }
+    }
+}
+class Ex3DoWhile {
+    public static void main(String[] args) {
+        /*
+        * 3. Do-while – Continuar ou parar
+            Descrição: Peça que o usuário digite seu nome. Após isso, pergunte se ele quer continuar (s) ou sair (n). Repita enquanto a resposta for s.
+        * */
+        /*
+        * int i = 0;
+        do {
+            System.out.println("Valor de i: " + i);
+            i++;
+        } while (i < 5);
+        * */
+        Scanner scanner = new Scanner(System.in);
+        String continuar;
+        String nome;
+        do {
+
+        // Nome
+        System.out.print("Digite seu nome: ");
+        nome = scanner.next();
+
+        // Deseja continuar?
+        System.out.print("Deseja continuar? [s/n]: ");
+        continuar = scanner.next();
+
+        } while ( continuar.equalsIgnoreCase("s"));
+        System.out.println("Ok " +  nome + " programa encerrado.");
+        scanner.close();
     }
 }
